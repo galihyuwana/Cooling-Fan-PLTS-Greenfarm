@@ -1,0 +1,1216 @@
+[
+    {
+        "id": "4c977091367a5b88",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "15ad45b03a8502fe",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.82",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1012c059d07d211e",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "7b8b874621d2363f",
+        "type": "ui-base",
+        "name": "Base",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": false,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "none",
+        "titleBarStyle": "hidden",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "2d0b0036d0672e47",
+        "type": "ui-page",
+        "name": "Detail",
+        "ui": "7b8b874621d2363f",
+        "path": "/Detail",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "1012c059d07d211e",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 2,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "8e6f4ca94d91960f",
+        "type": "ui-group",
+        "name": "Inverter PLTS",
+        "page": "2d0b0036d0672e47",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d17590936a908ed7",
+        "type": "ui-group",
+        "name": "Control",
+        "page": "2d0b0036d0672e47",
+        "width": "12",
+        "height": 1,
+        "order": 2,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "e7fd6fa4842dd834",
+        "type": "ui-group",
+        "name": "Grafik Suhu Realtime",
+        "page": "2d0b0036d0672e47",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "798b1aaf1c5c0aad",
+        "type": "ui-page",
+        "name": "Home",
+        "ui": "7b8b874621d2363f",
+        "path": "/Home",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "1012c059d07d211e",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "be9fee48ef16efd9",
+        "type": "ui-group",
+        "name": "Device",
+        "page": "798b1aaf1c5c0aad",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1fddfe1c224b9a7b",
+        "type": "sqlitedb",
+        "db": "D:\\GREENFARM\\.node-red\\plts.db",
+        "mode": "RWC"
+    },
+    {
+        "id": "a0c68c076dfb97f3",
+        "type": "mqtt in",
+        "z": "4c977091367a5b88",
+        "name": "",
+        "topic": "plts/+/status",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "15ad45b03a8502fe",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "fb408df58ccac635"
+            ]
+        ]
+    },
+    {
+        "id": "3c63e54ae43a04c8",
+        "type": "debug",
+        "z": "4c977091367a5b88",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fb408df58ccac635",
+        "type": "json",
+        "z": "4c977091367a5b88",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 100,
+        "wires": [
+            [
+                "3c63e54ae43a04c8",
+                "65760c567c6f16d3",
+                "b14cde28b1a26b16",
+                "fe7f768b0a0faae0",
+                "394242c0ab962ae1"
+            ]
+        ]
+    },
+    {
+        "id": "51f1ca3059bc30a2",
+        "type": "ui-chart",
+        "z": "4c977091367a5b88",
+        "group": "e7fd6fa4842dd834",
+        "name": "Grafik Suhu",
+        "label": "Grafik Suhu",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "Time",
+        "xAxisProperty": "x",
+        "xAxisPropertyType": "property",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "Temperature",
+        "yAxisProperty": "y",
+        "yAxisPropertyType": "property",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": false,
+        "removeOlder": "0",
+        "removeOlderUnit": "3600",
+        "removeOlderPoints": "10000",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 1150,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ba8b7bb23af2abc",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Sync Mode",
+        "func": "msg.payload = (msg.payload.mode === \"MANUAL\");\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 120,
+        "wires": [
+            [
+                "95e5c813d36710fa"
+            ]
+        ]
+    },
+    {
+        "id": "20d6811856d19a2d",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Sync Fan",
+        "func": "msg.payload = Boolean(msg.payload.fan);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 180,
+        "wires": [
+            [
+                "af1bed7f59c22c6c"
+            ]
+        ]
+    },
+    {
+        "id": "53b5d2ea171d2603",
+        "type": "ui-template",
+        "z": "4c977091367a5b88",
+        "group": "8e6f4ca94d91960f",
+        "page": "",
+        "ui": "",
+        "name": "Device Status Card",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<div class=\"custom-header\">\n\n  <div class=\"header-left\">\n\n    <a href=\"/dashboard/Home\" class=\"back-btn\">\n      ← Back\n    </a>\n\n    <span class=\"header-title\">\n      PLTS COOLING MONITORING\n    </span>\n\n  </div>\n\n  <div class=\"header-device\">\n    PLTS-01\n  </div>\n\n</div>\n\n<style>\n  .custom-header {\n    width: 100%;\n    height: 64px;\n\n    display: flex;\n    align-items: center;\n    justify-content: space-between;\n\n    padding: 0 24px;\n\n    background: #166534;\n    color: white;\n\n    border-radius: 10px;\n\n    box-sizing: border-box;\n\n    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);\n  }\n\n  .header-left {\n    display: flex;\n    align-items: center;\n    gap: 18px;\n  }\n\n  .header-title {\n    font-size: 20px;\n    font-weight: 700;\n  }\n\n  .header-device {\n    font-size: 15px;\n    font-weight: 600;\n  }\n\n  .back-btn {\n    padding: 7px 14px;\n\n    background: #22c55e;\n    color: white !important;\n\n    text-decoration: none;\n\n    border-radius: 7px;\n\n    font-weight: 600;\n\n    transition: 0.2s;\n  }\n\n  .back-btn:hover {\n    background: #facc15;\n    color: black !important;\n  }\n\n  @media (max-width: 600px) {\n\n    .custom-header {\n      padding: 0 12px;\n    }\n\n    .header-title {\n      font-size: 14px;\n    }\n\n    .header-device {\n      font-size: 12px;\n    }\n\n    .back-btn {\n      padding: 6px 10px;\n      font-size: 12px;\n    }\n  }\n</style>\n\n<div style=\"\n    padding:0px 18px;\n    border-radius: 14px;\n    background: rgba(255,255,255,0.06);\n  \">\n    <a href=\"/dashboard/Home\" class=\"back-btn\">\n      ←  BACK\n    </a>\n\n    <style>\n      .back-btn {\n        display: inline-block;\n        padding: 8px 16px;\n        background-color: #397b35;\n        color: white !important;\n        text-decoration: none;\n        border-radius: 8px;\n        border: none;\n        font-weight: 600;\n        font-size:15px;\n        transition: 0.2s;\n      }\n\n      .back-btn:hover {\n        background-color: #3b572f;\n        color: white !important;\n      }\n    </style>\n\n  <div style=\"\n      display:flex;\n      justify-content:space-between;\n      align-items:center;\n      margin-bottom:18px;\n      margin-top:10px;\n  \">\n  <div>\n        <div style=\"\n        font-size:20px;\n        font-weight:700;\n    \">\n      {{ msg.payload.device_id }}\n    </div>\n      <div style=\"font-size:12px;\">\n        Last Update :\n                 {{\n          new Date(msg.payload.last_seen).toLocaleTimeString('id-ID')\n          }}\n      </div>\n  </div>\n\n\n    <div style=\"\n        display:flex;\n        gap:18px;\n        align-items:center;\n    \">\n\n        <span v-if=\"msg.payload.online\" style=\"color: green; font-weight: bold;\">\n          ● ONLINE\n        </span>\n\n        <span v-else style=\"color: red; font-weight: bold;\">\n         ● OFFLINE\n        </span>\n\n      <div>\n        {{ msg.payload.wifi_rssi }} dBm\n      </div>\n\n    </div>\n\n  </div>\n\n\n  <div style=\"\n      text-align:center;\n      font-size:46px;\n      font-weight:700;\n      margin:16px 0 24px 0;\n  \">\n    {{ msg.payload.temperature }} °C\n  </div>\n\n\n  <div style=\"\n      display:grid;\n      grid-template-columns:1fr 1fr;\n      gap:14px;\n  \">\n\n    <div>\n      Status Suhu :\n      <b>{{ msg.payload.temperature_status }}</b>\n    </div>\n\n    <div style=\"text-align:right;\">\n      Fan :\n      <b>{{ msg.payload.fan ? 'ON' : 'OFF' }}</b>\n    </div>\n\n    <div>\n      Mode :\n      <b>{{ msg.payload.mode }}</b>\n    </div>\n\n    <div style=\"text-align:right;\">\n      Sensor :\n      <b>{{ msg.payload.sensor === 'OK' ? 'Terhubung' : 'Error' }}</b>\n    </div>\n\n  </div>\n\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1170,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95e5c813d36710fa",
+        "type": "ui-switch",
+        "z": "4c977091367a5b88",
+        "name": "",
+        "label": "Mode",
+        "group": "d17590936a908ed7",
+        "order": 1,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 830,
+        "y": 100,
+        "wires": [
+            [
+                "8556d51155ce7771"
+            ]
+        ]
+    },
+    {
+        "id": "af1bed7f59c22c6c",
+        "type": "ui-switch",
+        "z": "4c977091367a5b88",
+        "name": "Fan Manual",
+        "label": "Fan Manual",
+        "group": "d17590936a908ed7",
+        "order": 2,
+        "width": "6",
+        "height": "1",
+        "passthru": false,
+        "decouple": false,
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "className": "",
+        "layout": "row-left",
+        "clickableArea": "switch",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 850,
+        "y": 160,
+        "wires": [
+            [
+                "96641788d0d5cc84"
+            ]
+        ]
+    },
+    {
+        "id": "8556d51155ce7771",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Mode Command",
+        "func": "let device = flow.get(\"selected_device\");\n\nif (!device) {\n    return null;\n}\n\nmsg.payload = msg.payload === true\n    ? \"MANUAL\"\n    : \"AUTO\";\n\nmsg.topic =\n    \"plts/\" +\n    device +\n    \"/command/mode\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 100,
+        "wires": [
+            [
+                "9124f0c5194a2e88"
+            ]
+        ]
+    },
+    {
+        "id": "96641788d0d5cc84",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Fan Command",
+        "func": "let device = flow.get(\"selected_device\");\n\nif (!device) {\n    return null;\n}\n\nmsg.payload = msg.payload === true\n    ? \"ON\"\n    : \"OFF\";\n\nmsg.topic =\n    \"plts/\" +\n    device +\n    \"/command/fan\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 160,
+        "wires": [
+            [
+                "9124f0c5194a2e88"
+            ]
+        ]
+    },
+    {
+        "id": "9124f0c5194a2e88",
+        "type": "mqtt out",
+        "z": "4c977091367a5b88",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "15ad45b03a8502fe",
+        "x": 1170,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8255c6c8beaf5cca",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Update Device Status",
+        "func": "let data = msg.payload;\n\nif (!data || !data.device_id) {\n    return null;\n}\n\nlet now = Date.now();\n\ndata.last_seen = now;\ndata.online = true;\n\nlet device = data.device_id;\n\nflow.set(device + \"_status\", data);\nflow.set(device + \"_last_seen\", now);\nflow.set(device + \"_online\", true);\n\nmsg.payload = data;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 220,
+        "wires": [
+            [
+                "53b5d2ea171d2603"
+            ]
+        ]
+    },
+    {
+        "id": "587792187eb481bf",
+        "type": "inject",
+        "z": "4c977091367a5b88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 830,
+        "y": 360,
+        "wires": [
+            [
+                "04075434c99d1f60"
+            ]
+        ]
+    },
+    {
+        "id": "04075434c99d1f60",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Check Device Online",
+        "func": "let device = flow.get(\"selected_device\");\n\nif (!device) {\n    return null;\n}\n\nlet lastSeen = flow.get(device + \"_last_seen\");\nlet online   = flow.get(device + \"_online\");\nlet data     = flow.get(device + \"_status\");\n\nif (!lastSeen || !data) {\n    return null;\n}\n\nlet now = Date.now();\nlet selisih = now - lastSeen;\n\nif (selisih > 15000) {\n\n    if (online === true) {\n\n        data.online = false;\n\n        flow.set(device + \"_online\", false);\n        flow.set(device + \"_status\", data);\n\n        msg.payload = data;\n\n        return msg;\n    }\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1060,
+        "y": 360,
+        "wires": [
+            [
+                "53b5d2ea171d2603"
+            ]
+        ]
+    },
+    {
+        "id": "65760c567c6f16d3",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Update Device registery",
+        "func": "let data = msg.payload;\n\nif (!data || !data.device_id) {\n    return null;\n}\n\nlet devices = flow.get(\"devices\") || {};\n\ndata.last_seen = Date.now();\n\ndevices[data.device_id] = data;\n\nflow.set(\"devices\", devices);\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73ac42f2fef533d2",
+        "type": "inject",
+        "z": "4c977091367a5b88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 950,
+        "y": 480,
+        "wires": [
+            [
+                "4909690f8ea10d38"
+            ]
+        ]
+    },
+    {
+        "id": "4909690f8ea10d38",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Build Device List",
+        "func": "let devices = flow.get(\"devices\") || {};\n\nlet now = Date.now();\n\nlet list = [];\n\nfor (let id in devices) {\n\n    let d = devices[id];\n\n    let online =\n        (now - d.last_seen) <= 15000;\n\n    list.push({\n        device_id: d.device_id,\n        temperature: d.temperature,\n        temperature_status: d.temperature_status,\n        fan: d.fan,\n        mode: d.mode,\n        sensor: d.sensor,\n        wifi_rssi: d.wifi_rssi,\n        last_seen: d.last_seen,\n        online: online\n    });\n}\n\nlist.sort((a, b) =>\n    a.device_id.localeCompare(b.device_id)\n);\n\nmsg.payload = list;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 480,
+        "wires": [
+            [
+                "aea46547ca417cc1"
+            ]
+        ]
+    },
+    {
+        "id": "aea46547ca417cc1",
+        "type": "ui-template",
+        "z": "4c977091367a5b88",
+        "group": "be9fee48ef16efd9",
+        "page": "",
+        "ui": "",
+        "name": "Device List",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<div class=\"custom-header\">\n\n  <div class=\"header-left\">\n    <span class=\"header-icon\">☀</span>\n\n    <span class=\"header-title\">\n      COOLING FAN PLTS MONITORING\n    </span>\n  </div>\n\n  <!-- <div class=\"header-right\">\n    <span class=\"system-dot\">●</span>\n    <span>SYSTEM ONLINE</span>\n  </div> -->\n\n</div>\n\n<style>\n.custom-header {\n  width: 100%;\n  height: 64px;\n\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n\n  padding: 0 24px;\n\n  background: #166534;\n  color: white;\n\n  border-radius: 10px;\n\n  box-sizing: border-box;\n\n  box-shadow: 0 2px 8px rgba(0,0,0,0.15);\n}\n\n.header-left {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.header-icon {\n  font-size: 25px;\n}\n\n.header-title {\n  font-size: 20px;\n  font-weight: 700;\n  letter-spacing: 0.5px;\n}\n\n.header-right {\n  display: flex;\n  align-items: center;\n  gap: 7px;\n\n  font-size: 13px;\n  font-weight: 600;\n}\n\n.system-dot {\n  color: #4ade80;\n  font-size: 16px;\n}\n\n@media (max-width: 600px) {\n\n  .custom-header {\n    height: 56px;\n    padding: 0 14px;\n  }\n\n  .header-title {\n    font-size: 15px;\n  }\n\n  .header-right {\n    font-size: 11px;\n  }\n\n  .header-icon {\n    font-size: 20px;\n  }\n}\n</style>\n<div style=\"\n    display:grid;\n    grid-template-columns:\n        repeat(auto-fit, minmax(280px, 1fr));\n    gap:16px;\n    padding:8px;\n\">\n\n    <div v-for=\"device in msg.payload\" :key=\"device.device_id\" style=\"\n            border:1px solid #ddd;\n            border-radius:14px;\n            padding:18px;\n            min-height:170px;\n        \">\n\n        <!-- HEADER -->\n        <div style=\"\n            display:flex;\n            justify-content:space-between;\n            align-items:center;\n            margin-bottom:20px;\n        \">\n\n            <b style=\"font-size:20px;\">\n                {{ device.device_id }}\n            </b>\n            <div>\n                <b\n                    :style=\"{\n                        color: device.online ? '#16a34a' : '#dc2626',\n                        fontWeight: '700'\n                    }\"\n                >\n                    {{ device.online ? '● ONLINE' : '● OFFLINE' }}\n                </b>\n                <v-icon :icon=\"\n                        !device.online\n                            ? 'mdi-wifi-strength-off-outline'\n                        : device.wifi_rssi >= -55\n                            ? 'mdi-wifi-strength-4'\n                        : device.wifi_rssi >= -67\n                            ? 'mdi-wifi-strength-3'\n                        : device.wifi_rssi >= -75\n                            ? 'mdi-wifi-strength-2'\n                        : 'mdi-wifi-strength-1'\n                    \" size=\"28\" :style=\"{\n                        color: !device.online\n                            ? '#9ca3af'\n                            : device.wifi_rssi >= -67\n                                ? '#16a34a'\n                            : device.wifi_rssi >= -75\n                                ? '#f59e0b'\n                                : '#dc2626'\n                }\"></v-icon>\n            </div>\n\n        </div>\n\n\n        <!-- TEMPERATURE -->\n        <div style=\"\n            display:flex;\n            justify-content:space-between;\n            align-items:center;\n            margin-bottom:12px;\n        \">\n\n            <span style=\"\n                font-size:30px;\n                font-weight:700;\n            \">\n                {{ device.online\n                    ? device.temperature + ' °C'\n                    : '-- °C' }}\n            </span>\n\n            <span>\n                Fan :\n                <b>\n                    {{ device.fan ? 'ON' : 'OFF' }}\n                </b>\n            </span>\n\n        </div>\n\n\n        <!-- INFORMATION -->\n        <div style=\"\n            display:flex;\n            justify-content:space-between;\n            margin-bottom:20px;\n        \">\n\n            <span>\n                Mode :\n                <b>{{ device.mode }}</b>\n            </span>\n\n        </div>\n\n\n        <!-- BUTTON -->\n        <!-- <a :href=\"'/dashboard/Detail?device='\n                + device.device_id\" style=\"\n                display:block;\n                text-align:center;\n                text-decoration:none;\n                padding:10px;\n                border:1px solid #aaa;\n                border-radius:8px;\n            \">\n            Lihat Device →\n        </a> -->\n\n        <a\n          :href=\"'/dashboard/Detail?device=' + device.device_id\"\n          class=\"detail-btn\"\n        >\n          Lihat Device →\n        </a>\n        <style>\n          .detail-btn{\n            display:block;\n                text-align:center;\n                text-decoration:none;\n                padding:10px;\n                border:1px solid #aaa;\n                border-radius:8px;\n          }\n        </style>\n        \n        <button\n          @click=\"deleteDevice(device.device_id)\"\n          style=\"\n            margin-top:16px;\n            width:100%;\n            padding:8px;\n            border:1px solid #dc2626;\n            border-radius:6px;\n            background:white;\n            color:#dc2626;\n            cursor:pointer;\n          \"\n        >\n          Hapus Device\n        </button>\n    </div>\n\n</div>\n\n<script>\nexport default {\n  methods: {\n\n    deleteDevice(deviceId) {\n\n      if (!confirm(\"Hapus device \" + deviceId + \"?\")) {\n        return;\n      }\n\n      this.send({\n        topic: \"delete_device\",\n        payload: deviceId\n      });\n\n    }\n\n  }\n}\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 990,
+        "y": 560,
+        "wires": [
+            [
+                "2135709f3f87e498"
+            ]
+        ]
+    },
+    {
+        "id": "78f78e08cd8642a8",
+        "type": "ui-template",
+        "z": "4c977091367a5b88",
+        "group": "d17590936a908ed7",
+        "page": "",
+        "ui": "",
+        "name": "Device Selector",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<script>\n    (function(scope) {\n\n    const params = new URLSearchParams(window.location.search);\n    const device = params.get(\"device\");\n\n    if (device) {\n        scope.send({\n            topic: \"selected_device\",\n            payload: device\n        });\n    }\n\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "28e3e1b60325cabe",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Set Selected Device",
+        "func": "if (msg.topic !== \"$pageview\") {\n    return null;\n}\n\nif (!msg.payload || !msg.payload.query) {\n    return null;\n}\n\nlet device = msg.payload.query.device;\n\nif (!device) {\n    return null;\n}\n\nflow.set(\"selected_device\", device);\n\nif (!flow.get(\"history_range\")) {\n    flow.set(\"history_range\", \"1h\");\n}\n\nnode.warn(\"Selected Device = \" + device);\n\nmsg.payload = device;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 320,
+        "wires": [
+            [
+                "11e2b30640ec5e10",
+                "b5ce02281f4720ca",
+                "f90f5efa46d32824"
+            ]
+        ]
+    },
+    {
+        "id": "b14cde28b1a26b16",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Filter Selected Device",
+        "func": "let selected = flow.get(\"selected_device\");\n\nif (!selected) {\n    return null;\n}\n\nif (!msg.payload || !msg.payload.device_id) {\n    return null;\n}\n\nif (msg.payload.device_id !== selected) {\n    return null;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 200,
+        "wires": [
+            [
+                "8255c6c8beaf5cca",
+                "5ba8b7bb23af2abc",
+                "20d6811856d19a2d",
+                "4adffa9b895a910a"
+            ]
+        ]
+    },
+    {
+        "id": "91b8c6073a8fdfab",
+        "type": "ui-event",
+        "z": "4c977091367a5b88",
+        "ui": "7b8b874621d2363f",
+        "name": "",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "28e3e1b60325cabe"
+            ]
+        ]
+    },
+    {
+        "id": "11e2b30640ec5e10",
+        "type": "debug",
+        "z": "4c977091367a5b88",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b5ce02281f4720ca",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Load Selected Device",
+        "func": "let device = flow.get(\"selected_device\");\n\nif (!device) {\n    return null;\n}\n\nlet devices = flow.get(\"devices\") || {};\n\nlet data = devices[device];\n\nif (!data) {\n    node.warn(\"Data device belum tersedia: \" + device);\n    return null;\n}\n\nmsg.payload = data;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 280,
+        "wires": [
+            [
+                "fcdc414749a9c9c7"
+            ]
+        ]
+    },
+    {
+        "id": "462de814971eb0e1",
+        "type": "inject",
+        "z": "4c977091367a5b88",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 460,
+        "wires": [
+            [
+                "46d132d3f5d35e10"
+            ]
+        ]
+    },
+    {
+        "id": "46d132d3f5d35e10",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Create Table",
+        "func": "msg.topic = `\nCREATE TABLE IF NOT EXISTS temperature_history (\n    id INTEGER PRIMARY KEY AUTOINCREMENT,\n    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,\n    device_id TEXT NOT NULL,\n    temperature REAL,\n    fan INTEGER,\n    mode TEXT,\n    temperature_status TEXT,\n    sensor TEXT,\n    wifi_rssi INTEGER\n);\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 460,
+        "wires": [
+            [
+                "47a56e4b6fc446d0"
+            ]
+        ]
+    },
+    {
+        "id": "47a56e4b6fc446d0",
+        "type": "sqlite",
+        "z": "4c977091367a5b88",
+        "mydb": "1fddfe1c224b9a7b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 680,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe7f768b0a0faae0",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Database Interval",
+        "func": "let d = msg.payload;\n\nif (!d || !d.device_id) {\n    return null;\n}\n\nlet key = \"db_last_\" + d.device_id;\nlet last = flow.get(key) || 0;\nlet now = Date.now();\n\nif ((now - last) < 60000) {\n    return null;\n}\n\nflow.set(key, now);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 540,
+        "wires": [
+            [
+                "9c03050434b872e0"
+            ]
+        ]
+    },
+    {
+        "id": "9c03050434b872e0",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Save Temperature",
+        "func": "let d = msg.payload;\n\nif (!d || !d.device_id) {\n    return null;\n}\n\nmsg.topic = `\nINSERT INTO temperature_history\n(\n    device_id,\n    temperature,\n    fan,\n    mode,\n    temperature_status,\n    sensor,\n    wifi_rssi\n)\nVALUES\n(\n    '${d.device_id}',\n    ${Number(d.temperature)},\n    ${d.fan ? 1 : 0},\n    '${d.mode}',\n    '${d.temperature_status}',\n    '${d.sensor}',\n    ${Number(d.wifi_rssi)}\n)\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "47a56e4b6fc446d0"
+            ]
+        ]
+    },
+    {
+        "id": "306efee01756cc9b",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Query History",
+        "func": "let device = flow.get(\"selected_device\");\nlet range = flow.get(\"history_range\") || \"1h\";\n\nif (!device) {\n    return null;\n}\n\nif (!/^[A-Za-z0-9_-]+$/.test(device)) {\n    return null;\n}\n\nlet sqliteRange;\n\nswitch (range) {\n\n    case \"30m\":\n        sqliteRange = \"-30 minutes\";\n        break;\n\n    case \"1h\":\n        sqliteRange = \"-1 hour\";\n        break;\n\n    case \"3h\":\n        sqliteRange = \"-3 hours\";\n        break;\n\n    case \"6h\":\n        sqliteRange = \"-6 hours\";\n        break;\n\n    case \"24h\":\n        sqliteRange = \"-24 hours\";\n        break;\n\n    case \"7d\":\n        sqliteRange = \"-7 days\";\n        break;\n\n    default:\n        sqliteRange = \"-1 hour\";\n}\n\nmsg.topic = `\nSELECT\n    timestamp,\n    temperature\nFROM temperature_history\nWHERE device_id = '${device}'\n  AND timestamp >= datetime('now', '${sqliteRange}')\nORDER BY timestamp ASC;\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 600,
+        "wires": [
+            [
+                "d98380f2cd04fc2f"
+            ]
+        ]
+    },
+    {
+        "id": "85b959804d923fc2",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Format History",
+        "func": "let rows = msg.payload;\n\nif (!Array.isArray(rows) || rows.length === 0) {\n    return null;\n}\n\nlet points = [];\nlet previousTime = null;\n\n// Batas dianggap putus/offline\n// 2 menit = 120000 ms\nconst GAP_LIMIT = 120000;\n\nfor (let row of rows) {\n\n    let currentTime = new Date(\n        row.timestamp.replace(\" \", \"T\") + \"Z\"\n    ).getTime();\n\n    let temperature = Number(row.temperature);\n\n    // Kalau jarak dengan data sebelumnya terlalu jauh,\n    // masukkan NULL agar garis grafik terputus.\n    if (\n        previousTime !== null &&\n        (currentTime - previousTime) > GAP_LIMIT\n    ) {\n\n        points.push({\n            x: previousTime + 1000,\n            y: null\n        });\n\n        points.push({\n            x: currentTime - 1000,\n            y: null\n        });\n    }\n\n    points.push({\n        x: currentTime,\n        y: temperature\n    });\n\n    previousTime = currentTime;\n}\n\nmsg.payload = points;\nmsg.topic = \"Temperature\";\nmsg.action = \"replace\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 660,
+        "wires": [
+            [
+                "51f1ca3059bc30a2"
+            ]
+        ]
+    },
+    {
+        "id": "d98380f2cd04fc2f",
+        "type": "sqlite",
+        "z": "4c977091367a5b88",
+        "mydb": "1fddfe1c224b9a7b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 720,
+        "y": 600,
+        "wires": [
+            [
+                "85b959804d923fc2"
+            ]
+        ]
+    },
+    {
+        "id": "d3fae74c717ead41",
+        "type": "debug",
+        "z": "4c977091367a5b88",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "394242c0ab962ae1",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Sheets Interval",
+        "func": "let d = msg.payload;\n\nif (!d || !d.device_id) {\n    return null;\n}\n\nlet key = \"sheets_last_\" + d.device_id;\n\nlet last = flow.get(key) || 0;\nlet now = Date.now();\n\n// Simpan maksimal setiap 1 menit\nif ((now - last) < 60000) {\n    return null;\n}\n\nflow.set(key, now);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 240,
+        "y": 660,
+        "wires": [
+            [
+                "c49a4ae248a4dcdb"
+            ]
+        ]
+    },
+    {
+        "id": "c49a4ae248a4dcdb",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Prepare Sheets",
+        "func": "let d = msg.payload;\n\nif (!d || !d.device_id) {\n    return null;\n}\n\nmsg.headers = {\n    \"Content-Type\": \"application/json\"\n};\n\nmsg.payload = {\n    device_id: d.device_id,\n    temperature: Number(d.temperature),\n    fan: d.fan ? \"ON\" : \"OFF\",\n    mode: d.mode,\n    temperature_status: d.temperature_status,\n    sensor: d.sensor,\n    wifi_rssi: Number(d.wifi_rssi)\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 680,
+        "wires": [
+            [
+                "2bea42ffb8810a8f",
+                "d3fae74c717ead41"
+            ]
+        ]
+    },
+    {
+        "id": "2bea42ffb8810a8f",
+        "type": "http request",
+        "z": "4c977091367a5b88",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://script.google.com/macros/s/AKfycbzDZ7_EU2dlhAhoKhsNM7iiHnfFLslECeINVKioHQc5k-Q3qJyNMFaIOfi8pqXx3MLZZA/exec",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 690,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f90f5efa46d32824",
+        "type": "delay",
+        "z": "4c977091367a5b88",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 280,
+        "y": 600,
+        "wires": [
+            [
+                "306efee01756cc9b"
+            ]
+        ]
+    },
+    {
+        "id": "fcdc414749a9c9c7",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Prepare Cached Status",
+        "func": "let data = msg.payload;\n\nif (!data || !data.device_id) {\n    return null;\n}\n\nlet lastSeen = data.last_seen || 0;\n\n// Tentukan status berdasarkan waktu data terakhir,\n// BUKAN berdasarkan waktu halaman dibuka\ndata.online = (Date.now() - lastSeen) <= 15000;\n\nmsg.payload = data;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 280,
+        "wires": [
+            [
+                "53b5d2ea171d2603"
+            ]
+        ]
+    },
+    {
+        "id": "4adffa9b895a910a",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Temperature",
+        "func": "let d = msg.payload;\n\nif (!d || d.temperature === undefined) {\n    return null;\n}\n\nlet now = Date.now();\n\nlet device = d.device_id || \"unknown\";\n\nlet key = \"chart_last_\" + device;\n\nlet lastTime = flow.get(key) || 0;\n\nflow.set(key, now);\n\nconst GAP_LIMIT = 15000;   // 15 detik\n\n// Kalau sebelumnya sudah lama tidak ada data,\n// buat titik NULL dahulu.\nif (\n    lastTime !== 0 &&\n    (now - lastTime) > GAP_LIMIT\n) {\n\n    let gapMsg = {\n        topic: \"Temperature\",\n        action: \"append\",\n        payload: {\n            x: lastTime + 1000,\n            y: null\n        }\n    };\n\n    let currentMsg = {\n        topic: \"Temperature\",\n        action: \"append\",\n        payload: {\n            x: now,\n            y: Number(d.temperature)\n        }\n    };\n\n    return [gapMsg, currentMsg];\n}\n\n// Normal realtime\nmsg.payload = {\n    x: now,\n    y: Number(d.temperature)\n};\n\nmsg.topic = \"Temperature\";\nmsg.action = \"append\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 420,
+        "wires": [
+            [
+                "51f1ca3059bc30a2"
+            ]
+        ]
+    },
+    {
+        "id": "655fcacaff59d54b",
+        "type": "ui-dropdown",
+        "z": "4c977091367a5b88",
+        "group": "e7fd6fa4842dd834",
+        "name": "Rentang Grafik",
+        "label": "Select Option:",
+        "tooltip": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "chips": false,
+        "clearable": false,
+        "options": [
+            {
+                "label": "30 Menit",
+                "value": "30m",
+                "type": "str"
+            },
+            {
+                "label": "1 Jam",
+                "value": "1h",
+                "type": "str"
+            },
+            {
+                "label": "3 Jam",
+                "value": "3h",
+                "type": "str"
+            },
+            {
+                "label": "6 Jam",
+                "value": "6h",
+                "type": "str"
+            },
+            {
+                "label": "24 Jam",
+                "value": "24h",
+                "type": "str"
+            },
+            {
+                "label": "7 Hari",
+                "value": "7d",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "typeIsComboBox": true,
+        "msgTrigger": "onChange",
+        "x": 220,
+        "y": 780,
+        "wires": [
+            [
+                "bc422e5f6fdfccbf"
+            ]
+        ]
+    },
+    {
+        "id": "bc422e5f6fdfccbf",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Set History Range",
+        "func": "let range = msg.payload;\n\nconst allowed = [\n    \"30m\",\n    \"1h\",\n    \"3h\",\n    \"6h\",\n    \"24h\",\n    \"7d\"\n];\n\nif (!allowed.includes(range)) {\n    return null;\n}\n\nflow.set(\"history_range\", range);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 250,
+        "y": 720,
+        "wires": [
+            [
+                "306efee01756cc9b"
+            ]
+        ]
+    },
+    {
+        "id": "2135709f3f87e498",
+        "type": "function",
+        "z": "4c977091367a5b88",
+        "name": "Delete Device",
+        "func": "if (msg.topic !== \"delete_device\") {\n    return null;\n}\n\nlet deviceId = msg.payload;\n\nif (!deviceId) {\n    return null;\n}\n\nlet devices = flow.get(\"devices\") || {};\n\nif (devices[deviceId]) {\n\n    delete devices[deviceId];\n\n    flow.set(\"devices\", devices);\n\n    node.warn(\"Device dihapus: \" + deviceId);\n}\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b510f608642922de",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2",
+            "node-red-node-sqlite": "2.0.1"
+        }
+    }
+]
