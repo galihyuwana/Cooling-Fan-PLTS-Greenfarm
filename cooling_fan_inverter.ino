@@ -8,12 +8,14 @@
 // DEVICE
 // ==========================================================
 
-#define DEVICE_ID "PLTS-01"
+//GANTI DENGAN NAMA DEVICE
+#define DEVICE_ID "PLTS-01" 
 
 // ==========================================================
 // WIFI
 // ==========================================================
 
+//GANTI DENGAN WIFI YANG AKAN DIHUBUNGKAN
 const char* ssid = "GREENFARM";
 const char* password = "@GEI123456";
 
@@ -23,7 +25,6 @@ const char* password = "@GEI123456";
 
 // GANTI dengan IPv4 laptop yang menjalankan Mosquitto
 const char* mqtt_server = "192.168.1.82";
-
 const int mqtt_port = 1883;
 
 // ==========================================================
